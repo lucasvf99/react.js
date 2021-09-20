@@ -1,0 +1,14 @@
+.conteiner_products {
+    float: left;
+    width: 15%;
+    margin-left: 50px;
+    box-shadow: 1px 1px 5px black;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    
+}
+.conteiner_products >div> img {
+    width: 100%;
+}

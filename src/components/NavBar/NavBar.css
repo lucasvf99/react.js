@@ -1,12 +1,13 @@
 
 .conteiner_corona > img {
-    width: 40%;
+    width: 50%;
 }
 
 .conteiner_corona {
     width: 150px;
     float: left;
     margin-left: 0px;
+    margin: auto;
 }
 .css-1t29gy6-MuiToolbar-root {
     min-height: 64px;
