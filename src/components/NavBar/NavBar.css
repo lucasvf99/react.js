@@ -1,0 +1,21 @@
+
+.conteiner_corona > img {
+    width: 40%;
+}
+
+.conteiner_corona {
+    width: 150px;
+    float: left;
+    margin-left: 0px;
+}
+.css-1t29gy6-MuiToolbar-root {
+    min-height: 64px;
+    justify-content: space-between;
+}
+.conteiner_navbar{
+    display:flex;
+}
+ul.conteiner_navbar > li {
+    padding: 10px;
+    list-style: none;
+}
