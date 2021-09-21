@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 
 
 
@@ -30,7 +30,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
                       <li> <Button color="inherit"> Productos</Button></li>
                       <li> <Button color="inherit"> Preguntas</Button></li>
                       <li> <Button color="inherit"> Contacto</Button></li>
-                      <li>  <Button color="inherit"> <AddShoppingCartIcon/></Button> </li>
+                      <li>  <Button color="inherit"> <CartWidget/></Button> </li>
            
                       </ul>
                
