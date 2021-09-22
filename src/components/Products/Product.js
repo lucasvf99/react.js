@@ -1,6 +1,7 @@
+//Compontents
 import './Products.css';
 import collar from '../asset/collar-png.jpg'
-
+import ItemCount from '../ItemCount/ItemCount';
 
 
 
@@ -15,7 +16,7 @@ import collar from '../asset/collar-png.jpg'
                         </div>
                         <h3>{nombre}</h3>
                         <p>{price}</p>
-                        <button>Comprar</button>
+                        <ItemCount/> 
                 </div>
              
                 
