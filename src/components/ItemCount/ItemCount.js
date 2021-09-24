@@ -1,24 +1,37 @@
 import React,{useState} from 'react';
-import Button from '@mui/material/Button';
 import './ItemCount.css'
+//External Components
+import Button from '@mui/material/Button';
 
-export default function ItemCount () {
-        const [Items, setItem] = useState (0);
+
+export default function ItemCount ( {stock,initial}) {
+  
+        const [items, setItem] = useState (0);
+        const [disabledButton, setdisabledButton] = useState(false)
       
         const addClick = () => {
-                setItem (Items + 1)
+            if(items < stock){
+                setItem (items + 1)
+            }else{
+                setdisabledButton(true) 
+            }
+                
             
         }
+        
         const takeClick = () => {
-            setItem(Items - 1)
+          
+                setItem(items - 1)
+            
+            
         }
     return (
 
                 <div className='caja_boton'>
                            
-           <Button variant="contained" size="medium" onClick={takeClick}>-</Button>
-             <p>   {Items}</p>
-             <Button variant="contained" size="medium" onClick={addClick}>+</Button>
+           <Button variant="contained" size="medium" onClick={takeClick} >-</Button>
+             <p>   {items}</p>
+             <Button variant="contained" size="medium" onClick={addClick} disabled={disabledButton} >+</Button>
  
                 </div>           
         

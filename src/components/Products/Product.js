@@ -8,15 +8,16 @@ import ItemCount from '../ItemCount/ItemCount';
 
 
  const Products =(props) => {
-     const {nombre, price } = props 
+     const {titulo, price } = props 
     return (
                 <div className="conteiner_products">
                         <div>
                             <img src={collar} alt=""/>
                         </div>
-                        <h3>{nombre}</h3>
+                        <h3>{titulo}</h3>
                         <p>{price}</p>
-                        <ItemCount/> 
+                        <ItemCount stock={5} initial={1}/>
+                        <button>Agregar al carrito</button>
                 </div>
              
                 
