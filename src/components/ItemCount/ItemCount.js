@@ -20,7 +20,10 @@ export default function ItemCount ( {stock,initial}) {
         }
         
         const takeClick = () => {
-          
+          if(items>initial){
+            setItem(items - 1)
+ 
+          }
                 setItem(items - 1)
             
             
@@ -29,9 +32,9 @@ export default function ItemCount ( {stock,initial}) {
 
                 <div className='caja_boton'>
                            
-           <Button variant="contained" size="medium" onClick={takeClick} >-</Button>
+           <Button variant="contained" size="medium" onClick={takeClick}   disabled={items <= initial} >-</Button>
              <p>   {items}</p>
-             <Button variant="contained" size="medium" onClick={addClick} disabled={disabledButton} >+</Button>
+             <Button variant="contained" size="medium" onClick={addClick} disabled={items >= stock} >+</Button>
  
                 </div>           
         
