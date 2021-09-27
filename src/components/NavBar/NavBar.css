@@ -20,3 +20,9 @@ ul.conteiner_navbar > li {
     padding: 10px;
     list-style: none;
 }
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    background-color: #F0EDCE !important;
+}
+.css-1y942vo-MuiButtonBase-root-MuiButton-root{
+    color: black !important;
+}
