@@ -1,0 +1,44 @@
+
+.detail-conteiner {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: flex-start;
+}
+
+.detail-conteiner-img >img {
+    width: 80%;
+    height: 600px;
+    box-shadow: 1px 1px 5px gray;
+    padding: 10px;
+}
+
+.detail-conteiner-info{
+    font-size: 25px;
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Merriweather', serif;
+    text-align: start;
+}
+.detail-conteiner-info >h2 {
+    margin-bottom: 0px;
+}
+p {
+    margin: 10px;
+}
+.item_span{
+    font-weight: bold;
+}
+.clase_oferta{
+    font-size: 20px;
+}
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-1knaqv7-MuiButtonBase-root-MuiButton-root {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    width: 70%;
+    margin-left: 40px;
+  
+}

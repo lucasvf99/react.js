@@ -1,8 +1,7 @@
 .conteiner_products {
     float: left;
-    width: 25%;
+    width: 23%;
     margin-left: 50px;
-    box-shadow: 1px 1px 5px black;
     text-align: left;
     font-family:'Birthstone', cursive;
     display: grid;
@@ -11,7 +10,10 @@
     "imagen"
     "texto";
     margin-bottom: 50px;
-    height: 650px;
+    height: 600px;
+    border-radius: 5%;
+    padding: 15px;
+    box-shadow: 1px 1px 5px gray;
 }
 .conteiner_products >div> img {
     width: 100%;

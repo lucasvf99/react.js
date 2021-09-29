@@ -7,18 +7,18 @@ import ItemCount from '../ItemCount/ItemCount';
 
 
  const Products =(props) => {
-     const {title, price, description, cantidad, image} = props 
+    
     return (
                 <div className="conteiner_products">
                         <div className="caja_img_product">
-                            <img src= {`./asset/products/${image}` } alt="imagen"/>
+                            <img src= {`./asset/products/${props.image}` } alt="imagen"/>
                         </div>
                         <div className="caja_p_product" >
-                        <h3>{title}</h3>
+                        <h3>{props.title}</h3>
                         <ul>
-                            <li>{description}</li>
-                            <li>Stock:{cantidad}</li>
-                            <li>{price}</li>    
+                            <li>{props.description}</li>
+                            <li>Stock:{props.cantidad}</li>
+                            <li>{props.price}</li>    
                             <li> <ItemCount stock={5} initial={1}/></li>  
                                        
                         </ul>

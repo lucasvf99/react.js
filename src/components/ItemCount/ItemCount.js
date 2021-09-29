@@ -31,10 +31,10 @@ export default function ItemCount ( {stock,initial}) {
     return (
 
                 <div className='caja_boton'>
-                           
-           <Button variant="contained" size="medium" onClick={takeClick}   disabled={items <= initial} >-</Button>
+
+                <Button variant="outlined" onClick={takeClick}   disabled={items <= initial}>-</Button>
              <p>   {items}</p>
-             <Button variant="contained" size="medium" onClick={addClick} disabled={items >= stock} >+</Button>
+             <Button variant="outlined" size="medium" onClick={addClick} disabled={items >= stock} >+</Button>
  
                 </div>           
         

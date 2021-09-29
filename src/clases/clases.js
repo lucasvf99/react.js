@@ -28,5 +28,5 @@ const promesa1 = new Promise ((resolve, reject) =>{
 })
 
 promesa1.then( (data)=>{
-    console.log('Lista de productos:' , data)
+    //console.log('Lista de productos:' , data)
 })
