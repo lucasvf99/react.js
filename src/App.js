@@ -6,7 +6,7 @@ import ListProductConteiner from './components/ItemListConteiner/ItemListContein
 import clases from './clases/clases'
 import { ThemeContext } from '@mui/styled-engine';
 import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
-
+import AppRouter from './AppRouter/AppRouter';
 
 
 
@@ -34,10 +34,11 @@ fetch(apipokemon,  {})
 
   return (
     <div className="App">
-      <NavBar/>
-      <div className="imagenFondo_app"> <h1 className="titulo">Accesorios para la Reina </h1></div>
-      <ListProductConteiner greeting={"Bienvenidos"}/>
-      <ItemDetailConteiner />
+    
+       <AppRouter/>
+         <h1 className="titulo">Accesorios para la Reina </h1>
+     
+     
     </div>
   );
 }

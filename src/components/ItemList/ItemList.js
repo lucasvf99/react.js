@@ -7,7 +7,7 @@ export default function ItemList ({products}){
     return(
                 <>
                 {products.map((product)=>{
-                   return  (<Products key={product.id} title={product.title} price={product.price} description={product.description} cantidad={product.cantidad} image={product.img} />)
+                   return  (<Products {...product} key={product.id} />)
                 })}
                 </>
 
