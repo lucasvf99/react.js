@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
     return (
                 <div className="conteiner_products">
                         <div className="caja_img_product">
-                            <img src= {`./asset/products/${props.img}` } alt="imagen"/>
+                            <img src= {`/asset/products/${props.img}` } alt="imagen"/>
                         </div>
                         <div className="caja_p_product" >
                         <h3>{props.title}</h3>

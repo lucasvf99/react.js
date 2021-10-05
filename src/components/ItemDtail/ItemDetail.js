@@ -13,7 +13,7 @@ function ItemDetail(props) {
           
            
            <div className="detail-conteiner-img"> 
-               <img src= {`./asset/products/${props.data.img}` }/>
+               <img src= {`/asset/products/${props.data.img}` }/>
            </div>
             
             <div className="detail-conteiner-info">

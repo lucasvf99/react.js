@@ -21,10 +21,10 @@ import CartWidget from '../CartWidget/CartWidget';
 
   const categories = [
     {id:'1', address: '/', text:'Productos' },
-    {id:'2', address: 'category/Anillos', text:'Anillos' },
-    {id:'3', address: 'category/Collares', text:'Collares' },
-    {id:'4', address: 'category/Aritos', text:'Aritos' },
-    {id:'5', address: 'category/Dijes', text:'Dijes' },
+    {id:'2', address: '/category/Anillos', text:'Anillos' },
+    {id:'3', address: '/category/Collares', text:'Collares' },
+    {id:'4', address: '/category/Aritos', text:'Aritos' },
+    {id:'5', address: '/category/Dijes', text:'Dijes' },
   ];
 
 

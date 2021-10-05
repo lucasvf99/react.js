@@ -6,6 +6,8 @@ import NotFoundPage from '../pages/NotFoundPage'
 import NavBar from '../components/NavBar/NavBar'
 import ProductDetailPage from '../pages/ProductDetailPage'
 import ListProductConteiner from '../components/ItemListConteiner/ItemListConteiner'
+import ItemDetail from '../components/ItemDtail/ItemDetail'
+
 
 export default function AppRouter () {
     return (
@@ -16,8 +18,8 @@ export default function AppRouter () {
                 <Route exact path="/contacto" component={ContacPage}/>          
                 <Route exact path="/producto/" component={ProductDetailPage}/>
                 <Route exact path="/category/:catId" component={ListProductConteiner}/>
+                <Route exact path ="/product/:productId" component={ListProductConteiner}/> 
                 <Route  exact path="*" component={NotFoundPage} />
-                   
             </Switch>
         </BrowserRouter>
     )

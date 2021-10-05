@@ -8,8 +8,10 @@ import { useParams } from "react-router-dom";
 
 
 const ListProductConteiner  = ({}) => {
-        const [products, setProducts] = useState([])
-        const {catId} = useParams();
+        const [products, setProducts] = useState([]);
+        const [loader, setLoader] = useState (true);
+        const {catId,productId} = useParams();
+       
 
         const getProducts = new Promise ((resolve) =>{
                 setTimeout(() => {
@@ -19,8 +21,10 @@ const ListProductConteiner  = ({}) => {
 
         useEffect (() =>{
                 getProducts.then((res)=>{
-                        catId ? setProducts(res.filter((i) => i.category === catId)) : setProducts(res)
-                })
+                        catId ? setProducts(res.filter((i) => i.category === catId)) : 
+                        productId ? setProducts(res.filter((i)=> i.id === productId)) :
+                        setProducts(res);
+                });
         },[catId])
 
         return(
