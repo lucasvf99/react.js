@@ -1,38 +1,31 @@
 import React, {useState, useEffect } from "react";
 import ItemDetail from "../ItemDtail/ItemDetail";
 import './ItemListConteiner.css'
+import { MockProducts } from "../MockProducts/MockProducts";
+import { useParams } from "react-router-dom";
 
 function ItemDetailConteiner() {
   
     const [infoProducts, setInfoProducts ] = useState([]); 
+    const {catId,productId} = useParams();
 
     const getProduct = new Promise ((resolve) =>{
         setTimeout(() => {
-                const mockProduct = 
-                        {
-                                title:"Aros Dorados",
-                                price: '1700',
-                                id:"1",
-                                description:"Collar de acero inoxidable",
-                                cantidad:5,
-                                img:'accesorio.jpg'
-                                
-                        }
-                     
-                
-                resolve(mockProduct)
+        
+                resolve(MockProducts)
         },2000)
 })
 
 useEffect (() =>{
      getProduct.then((response) => {
+        productId ? setInfoProducts(response.filter((i)=> i.id === productId)) :
          setInfoProducts(response)
      })           
     
 },[])
       return (
         <div className="conteiner-detail">
-                <ItemDetail data={infoProducts}/>
+                <ItemDetail  products={ infoProducts } />
         </div>
       );
     }

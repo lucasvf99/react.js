@@ -7,6 +7,7 @@ import clases from './clases/clases'
 import { ThemeContext } from '@mui/styled-engine';
 import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
 import AppRouter from './AppRouter/AppRouter';
+import ItemDetail from './components/ItemDtail/ItemDetail';
 
 
 
@@ -14,19 +15,20 @@ import AppRouter from './AppRouter/AppRouter';
 
 
 function App() {
-const apipokemon = ' https://pokeapi.co/api/v2/pokemon?limit=10'
-useEffect( () => {
+  
+// const apipokemon = ' https://pokeapi.co/api/v2/pokemon?limit=10'
+// useEffect( () => {
 
-fetch(apipokemon,  {})
-.then((response)=>{
-   return response.json();
-})
-.then ((users) =>{
-  let pokemones = users.results;
-  console.log(pokemones.map( (pokemon) => pokemon.name))
-});
+// fetch(apipokemon,  {})
+// .then((response)=>{
+//    return response.json();
+// })
+// .then ((users) =>{
+//   let pokemones = users.results;
+//   console.log(pokemones.map( (pokemon) => pokemon.name))
+// });
 
-}, [])
+// }, [])
 
 
 
@@ -38,7 +40,7 @@ fetch(apipokemon,  {})
        <AppRouter/>
          <h1 className="titulo">Accesorios para la Reina </h1>
      
-     
+    
     </div>
   );
 }
