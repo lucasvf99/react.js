@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react"
-import Products from "../Products/Product";
+
 import ItemListConterner from '../ItemListConteiner/ItemListConteiner'
+import ProductDetail from "../ProductDetail/ProductDetail";
 
 
 export default function ItemDetail ({products}){
     return(
                 <>
                 { products.map((product)=>{
-                   return  (<Products {...product} key={product.id} />)
+                   return  (<ProductDetail {...product} key={product.id} />)
                 })}
                 </>
 

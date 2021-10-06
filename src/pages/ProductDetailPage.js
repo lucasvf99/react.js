@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ItemDetailConteiner from '../components/ItemDetailConteiner/ItemDetailConteiner'
 import { useParams } from 'react-router-dom'
 

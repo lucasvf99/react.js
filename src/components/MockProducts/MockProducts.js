@@ -1,7 +1,7 @@
 export const MockProducts  =[
     
         {
-            title:"collar 1",
+            title:" Aros Dorados",
             price: ' $1700',
             id:"1",
             description:"Collar de acero inoxidable",
@@ -11,7 +11,7 @@ export const MockProducts  =[
             
     },
     {
-            title: "Collar 2",
+            title: "Anillos Midi ",
             price: ' $1500',
             id:"2",
             description:"Collar de acero inoxidable",
@@ -22,7 +22,7 @@ export const MockProducts  =[
             
     },
     {
-            title:"collar 3",
+            title:"Collares ",
             price: '$ 1240',
             id:"3",
             description:"Collar de acero inoxidable",

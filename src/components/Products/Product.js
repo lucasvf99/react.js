@@ -16,20 +16,22 @@ import { Link } from 'react-router-dom';
                             <img src= {`/asset/products/${props.img}` } alt="imagen"/>
                         </div>
                         <div className="caja_p_product" >
-                        <h3>{props.title}</h3>
+                        <h2>{props.title}</h2>
                         <ul>
                             <li>{props.description}</li>
                             <li>Stock:{props.cantidad}</li>
                             <li>{props.price}</li>    
-                            <li> <ItemCount stock={5} initial={1}/></li>  
+                        
                                       
                         </ul>
-                        <Button variant="outlined" href="#outlined-buttons">
-                             Comprar
-                              </Button>     
+                            <div className="conteiner-button">
+                            <Button variant="outlined" href="#outlined-buttons">
+                                Comprar
+                             </Button>     
                               <Button variant="outlined" href="#outlined-buttons">
                                     <Link to={`/product/${props.id}`}>  Ver </Link>
-                              </Button>     
+                              </Button>       
+                            </div>  
                         </div>
                         
                         

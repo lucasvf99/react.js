@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 const ListProductConteiner  = ({}) => {
         const [products, setProducts] = useState([]);
         const [loader, setLoader] = useState (true);
-        const {catId,productId} = useParams();
+        const {catId} = useParams();
        
 
         const getProducts = new Promise ((resolve) =>{
@@ -22,7 +22,6 @@ const ListProductConteiner  = ({}) => {
         useEffect (() =>{
                 getProducts.then((res)=>{
                         catId ? setProducts(res.filter((i) => i.category === catId)) : 
-                        productId ? setProducts(res.filter((i)=> i.id === productId)) :
                         setProducts(res);
                 });
         },[catId])
