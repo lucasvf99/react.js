@@ -3,6 +3,7 @@ import ItemListConterner from '../ItemListConteiner/ItemListConteiner'
 import ProductDetail from "../ProductDetail/ProductDetail";
 import { Link } from 'react-router-dom';
 import ItemCount from "../ItemCount/ItemCount";
+import './ItemDetail.css';
 
 //external components
 import CreditCardIcon from '@mui/icons-material/CreditCard';
