@@ -1,4 +1,5 @@
-export const MockProducts  =[
+export const MockProducts  =
+[
     
         {
             title:" Aros Dorados",
@@ -17,7 +18,7 @@ export const MockProducts  =[
             description:"Collar de acero inoxidable",
             cantidad:6,
             img:'accesorio2.jpg',
-            category: 'Collares'
+            category: 'Anillos'
 
             
     },
@@ -28,7 +29,7 @@ export const MockProducts  =[
             description:"Collar de acero inoxidable",
             cantidad:8,
             img:'accesorio 3.jpg',
-            category: 'Collares'
+            category: 'Anillos'
             
     },
     {
@@ -37,8 +38,8 @@ export const MockProducts  =[
             id:"4",
             description:"Collar de acero inoxidable",
             cantidad:8,
-            img:'accesorio 4.jpg', 
-            category: 'Aritos'
+            img:'accesorio.jpg', 
+            category: 'Collares'
     },
     {
             title:"collar 3",
@@ -47,7 +48,7 @@ export const MockProducts  =[
             description:"Collar de acero inoxidable",
             cantidad:8,
             img:'accesorio.jpg',
-            category: 'Anillos'
+            category: 'Collares'
     },
     {
             title:"collar 3",
@@ -56,6 +57,33 @@ export const MockProducts  =[
             description:"Collar de acero inoxidable",
             cantidad:8,
             img:'accesorio 4.jpg',
-            category: 'Dijes'
+            category: 'Collares'
     },
+    {
+        title:"collar 3",
+        price: '$ 1240',
+        id:"6",
+        description:"Collar de acero inoxidable",
+        cantidad:8,
+        img:'accesorio 4.jpg',
+        category: 'Collares'
+},
+{
+        title:"collar 3",
+        price: '$ 1240',
+        id:"6",
+        description:"Collar de acero inoxidable",
+        cantidad:8,
+        img:'accesorio 4.jpg',
+        category: 'Collares'
+},
+{
+        title:"collar 3",
+        price: '$ 1240',
+        id:"6",
+        description:"Collar de acero inoxidable",
+        cantidad:8,
+        img:'accesorio 4.jpg',
+        category: 'Collares'
+},
     ]

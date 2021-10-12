@@ -1,20 +1,27 @@
 import React   from "react"; 
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import { useState, useEffect } from "react"
+import { useState, useContext } from "react"
 import { Link } from 'react-router-dom';
+import { MockProducts } from "../MockProducts/MockProducts";
 
 //external components
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import Button from '@mui/material/Button';
 
+//Context
+import CartContext from '../../Context/CartContext'
+
 function ProductDetail(props) {
  
  const [items, setItem] = useState (0);
- const [stock, setStock] = useState(10)
+ const [stock, setStock] = useState(6)
+
+
+ 
 
  const onAdd = () => {
- if(items<stock){
+ if(items<props.cantidad){
    setItem(items +1)
  }
  }
@@ -39,6 +46,7 @@ function ProductDetail(props) {
                 <p className="clase_oferta">Imperdible oferta</p>
                  < ItemCount onAdd ={onAdd} onLess={onLess} quantity={items } />
                 <Link to='/cart'> <Button size="small">Comprar</Button></Link>
+        
             </div>
         </div>
         

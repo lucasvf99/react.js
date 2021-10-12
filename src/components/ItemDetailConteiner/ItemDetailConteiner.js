@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 function ItemDetailConteiner() {
   
     const [infoProducts, setInfoProducts ] = useState([]); 
-    const {catId,productId} = useParams();
+    const {catId ,productId} = useParams();
 
     const getProduct = new Promise ((resolve) =>{
         setTimeout(() => {
