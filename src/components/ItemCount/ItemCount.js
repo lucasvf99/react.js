@@ -11,7 +11,7 @@ export default function ItemCount (props) {
 
                 <div className='caja_boton'>
 
-                <Button variant="outlined" onClick={props.onLess.cantidad}   >-</Button>
+                <Button variant="outlined" onClick={props.onLess}   >-</Button>
                         <p>  {props.quantity}</p>
                  <Button variant="outlined" size="medium" onClick={props.onAdd}  >+</Button>
  

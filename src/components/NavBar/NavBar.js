@@ -3,13 +3,12 @@ import React,{useState, useEffect, useContext } from 'react';
 import './NavBar.css';
 import corona from '../asset/corona.png' ;
 import { Link } from 'react-router-dom';
-
+import Cart from '../Cart/Cart'
 //external componets
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import CartWidget from '../CartWidget/CartWidget';
 import Switch from '@mui/material/Switch';
 //Context 
 import ThemContext from '../../Context/themContext'
@@ -57,7 +56,7 @@ import ThemContext from '../../Context/themContext'
                       </li>
                       <li> <Button color="inherit"> Preguntas</Button></li>
                       <li> <Link to="/contacto"><Button color="inherit"> Contacto</Button> </Link></li>
-                      <li>  <Button color="inherit"> <CartWidget/> <span> </span></Button> </li>
+                      <li>  <Button color="inherit"> <Cart/> <span> </span></Button> </li>
                     
                       </ul>
                

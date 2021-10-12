@@ -1,0 +1,36 @@
+.conteiner-cart{
+    right: -400px;
+    z-index:2 ;
+    top:0;
+    position: fixed;
+    transition: all 0.3 s ease;
+    background-color: white;
+    height: 100vh;
+    margin-top: 0px;
+
+}
+.conteiner-cart.active {
+    right: 0px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas: 
+    ". carrito close"
+    ". producto . "
+    "clean . .";
+    
+}
+.clear-cart{
+    grid-area: clean;
+}
+.title-cart{
+    grid-area: carrito;
+}
+.product-cart{
+    grid-area: producto;
+}
+.close-boton{
+    grid-area: close;
+    justify-self: end;
+}

@@ -18,8 +18,8 @@ function ItemDetailConteiner() {
 
 useEffect (() =>{
      getProduct.then((response) => {
-        productId ? setInfoProducts(response.filter((i)=> i.id === productId)) :
-         setInfoProducts(response)
+        setInfoProducts(response.find((i) => i.id === productId))
+       
      })           
     
 },[])

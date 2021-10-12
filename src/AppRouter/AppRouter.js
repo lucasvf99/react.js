@@ -10,24 +10,23 @@ import CartPage from '../pages/CartPage'
 
 //Context
 import { ThemProvider } from '../Context/themContext'
-
+import {CartProvider} from '../Context/CartContext'
 
 export default function AppRouter () {
     return (
         <BrowserRouter>
                 <ThemProvider>   
-             
+               
                         <NavBar/>
                         <Switch>     
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/contacto" component={ContacPage}/>          
                             <Route exact path="/category/:catId" component={ListProductConteiner}/>
-                            <Route exact path ="/product/:productId" component={ItemDetailConteiner }/> 
+                            <Route exact path ="/product/:productId" component={ItemDetailConteiner }/>                       
                             <Route exact path ="/cart" component={CartPage}/>
                             <Route  exact path="*" component={NotFoundPage} />
                         </Switch>
-                   
-                        </ThemProvider>
+                </ThemProvider>
 
          </BrowserRouter>
 

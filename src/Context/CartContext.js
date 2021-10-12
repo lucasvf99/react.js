@@ -1,54 +1,43 @@
  import React,{ createContext, useState } from "react";
 
 
- const   CartContext = createContext()
+ const   CartContext = createContext({})
 
- const CartContextProvider = ({children}) =>{
+ const CartProvider = ({children}) =>{
 
-     const [cartItems, setcartItems] = useState([])
+  const [cartProducts , setProducts] = useState([])
 
-
-     const addItem  = (item, count) => {
-    
-             let cartElement = { item  , count }
-
-             console.log("CONSOLE desde cartContext", cartElement)
-            
-             let cartAux = []
-
-             if(isInCart(item)) {
-                 cartElement = cartItems.find(element => element.item.id === item.id)
-                 cartElement.count = cartElement.count + count 
-                 cartAux = [...cartItems]
-             }else{
-                cartAux = [cartElement, ...cartItems]
-             }
-            setcartItems (cartAux)
-     }
-
-     const Clear = () =>{
-   return setcartItems ([])
-   }
+  const addProducts = (products, count) => {
+    let cartElement = {products, count}
+    console.log(`cartElement`, cartElement)
+    let cartAux = []
+    if (isInCart(products)) {
+      console.log(`Esta en el 🛒`)
+      cartElement = cartProducts.find(element => element.products.id === products.id)
+      cartElement.count = cartElement.count + count
+      cartAux = [...cartProducts] 
+    } else {
+      console.log(`NO esta en el 🛒`)
+      cartAux = [cartElement, ...cartProducts]
+    }
+    setProducts(cartAux)
+  }
 
 
-    const isInCart = (item) => {
-        return cartItems  && cartItems.some (element => element.item.id === item.id)
+  const isInCart = (products) => {
+    return cartProducts && cartProducts.some(element => element.products.id === products.id)
+  }
 
-     }
-    
-   const removeItem = (item) => {
-     if (isInCart(item)) {
-       const cartElements = cartItems.filter(element => element.item.id !== item.id) || []
-       setcartItems([...cartElements])
-     } 
-   }
+  const clear = () => {
+   return setProducts([])
+  }
+   
 
      return ( 
-         <CartContext.Provider value={addItem(),removeItem(),removeItem(), Clear}>
+         <CartContext.Provider value={{addProducts,clear,cartProducts }}>
              {children}
          </CartContext.Provider>
      )
  }
- 
 export default CartContext;
- export {CartContextProvider}
+ export {CartProvider}
