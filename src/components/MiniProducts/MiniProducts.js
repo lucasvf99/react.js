@@ -1,12 +1,27 @@
-import React from 'react'
-
+import React,{useContext} from 'react'
+import './MiniProducts.css'
+import DeleteIcon from '@mui/icons-material/Delete';
+//Context
+import CartContext from '../../Context/CartContext'
 
 const MiniProducts = ({products, count}) => {
-  const {title, price} = products
+  const {title, price,img,id} = products
+
+  const {removeItem} =useContext(CartContext)
+
+  const removeItems = ( ) => removeItem(products, count);
 
   return (
-    <div  >
-      <p>{title} | {count}u. x ${price}</p>      
+    <div className="conteiner-cart-products">
+      <div>
+        <div className="conteiner-img-cart"> <img src= {`/asset/products/${img}` } alt="imagen"/></div>
+        </div>
+      <div> 
+        <p>{title} | {count}u. x ${price}</p> 
+        </div>
+        <div>
+          <DeleteIcon onClick={removeItems}/>
+        </div>
     </div>
   )
 }

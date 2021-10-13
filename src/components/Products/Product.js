@@ -1,36 +1,58 @@
 //Compontents
-import React from 'react';
+import React,{useContext,useState} from 'react';
 import './Products.css';
 import ItemCount from '../ItemCount/ItemCount';
 //external Components
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+//Context
+import CartContext from '../../Context/CartContext'
 
 
 
- const Products =(props) => {
+ const Products =({products}) => {
+
+    const [count, setCount] = useState (0);
     
+ const onAdd = () => {
+    if(count< products.cantidad){
+        setCount(count +1)
+    }
+    }
+    const onLess = () =>{
+      if(count >  0){
+        setCount(count - 1)
+      }
+    };
+
+    const {addProducts,clear,removeOneItem} = useContext(CartContext);
+
+    const handleOnAdd = ( ) => addProducts(products,count);
+    const removerUnItem = ( ) => removeOneItem(products,count);
     return (
                 <div className="conteiner_products">
                         <div className="caja_img_product">
-                            <img src= {`/asset/products/${props.img}` } alt="imagen"/>
+                            <img src= {`/asset/products/${products.img}` }/>
                         </div>
                         <div className="caja_p_product" >
-                        <h2>{props.title}</h2>
+                        <h2></h2>
                         <ul>
-                            <li>{props.description}</li>
-                            <li>Stock:{props.cantidad}</li>
-                            <li>{props.price}</li>    
-                        
+                            <li>{products.description}</li>
+                            <li>Stock:{products.cantidad}</li>
+                            <li>{products.price}</li>    
+                            <ItemCount onAdd={onAdd} onLess={onLess} quantity={count} />
                                       
                         </ul>
                             <div className="conteiner-button">
-                            <Button variant="outlined" href="#outlined-buttons">
+                            <Button variant="outlined" href="#outlined-buttons" onClick={handleOnAdd}>
                                 Comprar
                              </Button>     
                               <Button variant="outlined" href="#outlined-buttons">
-                                    <Link to={`/product/${props.id}`}>  Ver </Link>
-                              </Button>       
+                                    <Link to={`/product/${products.id}`}>  Ver </Link>
+                              </Button>    
+                              <Button variant="outlined" href="#outlined-buttons" onClick={removerUnItem}>
+                                   Eliminar un Item
+                              </Button>         
                             </div>  
                         </div>
                         

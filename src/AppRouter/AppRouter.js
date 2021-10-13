@@ -10,7 +10,6 @@ import CartPage from '../pages/CartPage'
 
 //Context
 import { ThemProvider } from '../Context/themContext'
-import {CartProvider} from '../Context/CartContext'
 
 export default function AppRouter () {
     return (

@@ -11,6 +11,7 @@ const Cart = () => {
 const handleCart = () =>{
     !showCart ? setShowCart(true) : setShowCart(false)
 }
+
     return (
        <div>
         <Button onClick={handleCart}>

@@ -15,4 +15,8 @@ button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-siz
 }
 .MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
     color: black;
+    width: 40px;
+    height: 5vh;
+    font-size: 10px;
+    font-weight: bold;
 }

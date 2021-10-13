@@ -1,5 +1,5 @@
 .conteiner-cart{
-    right: -400px;
+    right: -450px;
     z-index:2 ;
     top:0;
     position: fixed;
@@ -11,26 +11,13 @@
 }
 .conteiner-cart.active {
     right: 0px;
-    width: 400px;
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 50px 50px 50px;
-    grid-template-areas: 
-    ". carrito close"
-    ". producto . "
-    "clean . .";
+    width: 350px;
     
 }
-.clear-cart{
-    grid-area: clean;
+.clear-cart {
+    float: left;
+  
 }
-.title-cart{
-    grid-area: carrito;
-}
-.product-cart{
-    grid-area: producto;
-}
-.close-boton{
-    grid-area: close;
-    justify-self: end;
+.close-boton {
+    float: right;
 }
