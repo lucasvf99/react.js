@@ -13,7 +13,7 @@ export default function ItemDetail ({products}){
 
 const [count, setCount] = useState (0);
 
-const {addProducts,clear,cartProducts,removeOneItem} = useContext(CartContext);
+const {addProducts,removeOneItem} = useContext(CartContext);
 
 const removerUnItem = ( ) => removeOneItem(products,count);
 

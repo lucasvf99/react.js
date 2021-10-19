@@ -12,7 +12,7 @@
     let cartElement = {products, count}
         console.log(`cartElement`, cartElement)
            let cartAux = []
-               if (isInCart(products)) {
+               if (isInCart(products)  ) {
                     console.log(`Esta en el carrito`)
                     cartElement = cartProducts.find(element => element.products.id === products.id)
                     cartElement.count = cartElement.count + count
