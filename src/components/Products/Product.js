@@ -50,9 +50,9 @@ import { querySnapshot } from '../callFirebase/callFirebase';
                             <Button variant="outlined" href="#outlined-buttons" onClick={handleOnAdd}>
                                 Comprar
                              </Button>     
-                              <Button variant="outlined" href="#outlined-buttons">
-                                    <Link to={`/product/${products.myId}`}>  Ver </Link>
-                              </Button>    
+                             <Button variant="outlined" href="#outlined-buttons">
+                               <Link to={`/product/${products.myId}`}> Ver </Link>
+                             </Button>
                               <Button variant="outlined" href="#outlined-buttons" onClick={removerUnItem}>
                                    Eliminar un Item
                               </Button>         
