@@ -6,9 +6,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 //Context
-import CartContext from '../../Context/CartContext'
-//Firebase
-import { querySnapshot } from '../callFirebase/callFirebase';
+import CartContext from '../../Context/CartContext';
 
 
  const Products =({products}) => {
@@ -33,7 +31,7 @@ import { querySnapshot } from '../callFirebase/callFirebase';
     const removerUnItem = ( ) => removeOneItem(products,count);
 
     return (
-                <div className="conteiner_products">
+                <div className="conteiner_products" key={products.id}>
                         <div className="caja_img_product">
                             <img src= {`/asset/products/${products.img}` }/>
                         </div>

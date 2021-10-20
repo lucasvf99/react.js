@@ -6,17 +6,36 @@ import CancelIcon from '@mui/icons-material/Cancel';
 //Context
 import CartContext from '../../Context/CartContext'
 
+
 const CartWidget = ({show,close}) => {
 
   const {cartProducts, clear,setProducts} = useContext(CartContext)
   
   console.log('fijando si funciona ', show) 
 
- const cartEmpty = () => {
-  if (cartProducts===[]){
-    setProducts(["No hay productos seleccionados "])
+
+
+  const newOrder = {
+     buyer : {
+        name: 'lucas',
+        email:'lucasvf4379@gmail.com',
+        phone: 12123123
+
+     },
+     item : cartProducts ,
+     total: ''
   }
-  }
+
+
+  const addOrder = () => {
+      let totalPrice = cartProducts.reduce(function(prev, current){
+        return prev + current.price
+      },0);
+      newOrder.total = totalPrice 
+      console.log ("orden nueva:", newOrder)
+    }
+   
+  
 
 
   return (
@@ -35,6 +54,7 @@ const CartWidget = ({show,close}) => {
        <div className="clear-cart">
         <button onClick={clear}>Limpiar carrito</button>
       </div>
+      <button onClick={addOrder}>Generar orden</button>
     </div>
   )
 }
