@@ -5,11 +5,14 @@ import './CartWidget.css'
 import CancelIcon from '@mui/icons-material/Cancel';
 //Context
 import CartContext from '../../Context/CartContext'
+//Firebase
+import db from '../../firebase'
+import { collection, addDoc } from '@firebase/firestore';
 
 
 const CartWidget = ({show,close}) => {
 
-  const {cartProducts, clear,setProducts} = useContext(CartContext)
+  const {cartProducts, clear} = useContext(CartContext)
   
   console.log('fijando si funciona ', show) 
 
@@ -29,11 +32,19 @@ const CartWidget = ({show,close}) => {
 
   const addOrder = () => {
       let totalPrice = cartProducts.reduce(function(prev, current){
-        return prev + current.price
+        return prev + current.products.price
       },0);
       newOrder.total = totalPrice 
       console.log ("orden nueva:", newOrder)
+      pushOrderFirebase(newOrder)
+    
     }
+
+    const pushOrderFirebase = async (newOrder) =>{
+        const orderFirebase = collection(db,'orders')
+        const order = await  addDoc(orderFirebase , newOrder)
+        console.log('genero la orden con el id ', order.id)
+   }
    
   
 

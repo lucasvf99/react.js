@@ -12,7 +12,7 @@ const MiniProducts = ({products, count}) => {
   const removeItems = ( ) => removeItem(products, count);
 
   return (
-    <div className="conteiner-cart-products">
+    <div className="conteiner-cart-products" key={products.id}>
       <div>
         <div className="conteiner-img-cart"> <img src= {`/asset/products/${img}` } alt="imagen"/></div>
         </div>

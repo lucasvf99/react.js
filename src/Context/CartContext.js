@@ -17,10 +17,12 @@
                     cartElement = cartProducts.find(element => element.products.id === products.id)
                     cartElement.count = cartElement.count + count
                     cartAux = [...cartProducts] 
+                   
                             } else {
                               console.log(`NO esta en el carrito`)
                               cartAux = [cartElement, ...cartProducts]
                             }
+                         
         setProducts(cartAux)
   }
 
@@ -59,6 +61,10 @@
       }
     } 
   }
+
+  // const addProductStorage = () =>{
+  //     localStorage.setItem("cartProduct", JSON.stringify(cartProducts))
+  // }
 
      return ( 
          <CartContext.Provider value={{addProducts,clear,cartProducts,removeItem,removeOneItem }}>
