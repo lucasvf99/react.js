@@ -32,9 +32,9 @@ const onAdd = () => {
 
     
 
-        const handleOnAdd = ( ) => addProducts(products, count);
- 
-
+      
+     
+      const handleOnAdd = ( ) => count > 0 && addProducts(products, count);
 
  
     return(

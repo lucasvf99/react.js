@@ -21,8 +21,13 @@ ul.conteiner_navbar > li {
     list-style: none;
 }
 .css-hip9hq-MuiPaper-root-MuiAppBar-root{
-    background-color: #F0EDCE !important;
+    background-color: #46484F !important;
 }
 .css-1y942vo-MuiButtonBase-root-MuiButton-root{
-    color: black !important;
+    color: white !important;
+}
+a.dropdown-nav.dropdown-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0EDCE;
 }

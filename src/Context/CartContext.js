@@ -62,12 +62,10 @@
     } 
   }
 
-  // const addProductStorage = () =>{
-  //     localStorage.setItem("cartProduct", JSON.stringify(cartProducts))
-  // }
+  
 
      return ( 
-         <CartContext.Provider value={{addProducts,clear,cartProducts,removeItem,removeOneItem }}>
+         <CartContext.Provider value={{addProducts,clear,cartProducts,removeItem,removeOneItem, }}>
              {children}
          </CartContext.Provider>
      )

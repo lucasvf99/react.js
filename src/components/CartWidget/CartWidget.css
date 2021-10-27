@@ -12,7 +12,8 @@
 .conteiner-cart.active {
     right: 0px;
     width: 350px;
-    
+    background-color: #888A95;
+    box-shadow: -2px 1px 22px 7px #454854;
 }
 .clear-cart {
     float: left;
@@ -20,4 +21,22 @@
 }
 .close-boton {
     float: right;
+}
+
+.conteiner-alert{
+    right: -450px;
+    z-index:2 ;
+    top:0;
+    position: fixed;
+    transition: all 0.3 s ease;
+    background-color: white;
+    height: 100vh;
+    margin-top: 0px;
+}
+
+.conteiner-alert.active{
+    right: 0px;
+    width: 350px;
+    background-color: #888A95;
+    box-shadow: -2px 1px 22px 7px #454854;
 }

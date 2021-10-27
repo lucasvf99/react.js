@@ -1,8 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext,useEffect,useState } from 'react'
 import MiniProducts from '../MiniProducts/MiniProducts'
 import './CartWidget.css'
+import { Link } from 'react-router-dom';
+import Modal from '../Modal/modal';
 //external components
 import CancelIcon from '@mui/icons-material/Cancel';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 //Context
 import CartContext from '../../Context/CartContext'
 //Firebase
@@ -10,13 +14,19 @@ import db from '../../firebase'
 import { collection, addDoc } from '@firebase/firestore';
 
 
+
 const CartWidget = ({show,close}) => {
 
-  const {cartProducts, clear} = useContext(CartContext)
   
-  console.log('fijando si funciona ', show) 
+  const {cartProducts, clear,removeOneItem,} = useContext(CartContext)
+  
+  const [alertProduct , setAlertProduct] = useState(false)
 
+ 
 
+  
+
+  
 
   const newOrder = {
      buyer : {
@@ -39,14 +49,26 @@ const CartWidget = ({show,close}) => {
       pushOrderFirebase(newOrder)
     
     }
+    
+
+
 
     const pushOrderFirebase = async (newOrder) =>{
         const orderFirebase = collection(db,'orders')
         const order = await  addDoc(orderFirebase , newOrder)
         console.log('genero la orden con el id ', order.id)
+        alert( `Compra exitosa, numero de producto: ${order.id} ${order.title}` )
    }
    
   
+   const alertCart = () =>{
+    !alertProduct ? setAlertProduct(true) : setAlertProduct(false)
+    console.log('esto anda:',alertProduct )
+   }
+
+  useEffect(()=>{
+
+  })
 
 
   return (
@@ -64,9 +86,20 @@ const CartWidget = ({show,close}) => {
       </div>
        <div className="clear-cart">
         <button onClick={clear}>Limpiar carrito</button>
+      
       </div>
-      <button onClick={addOrder}>Generar orden</button>
+    <button onClick={alertCart}> Finalizar Compra</button>
+
+    <div className={`conteiner-alert  ${alertProduct ? 'active' : ''}`} >
+
+    <button onClick={alertCart}><CancelIcon/></button>
+    
+    <Stack sx={{ width: '100%' }} spacing={2}>
+    <Alert severity="success">{alertProduct}</Alert>
+      </Stack>
     </div>
+    </div>
+   
   )
 }
 

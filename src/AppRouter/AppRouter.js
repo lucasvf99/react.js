@@ -10,6 +10,7 @@ import CartPage from '../pages/CartPage'
 
 //Context
 import { ThemProvider } from '../Context/themContext'
+import CartWidget from '../components/CartWidget/CartWidget'
 
 export default function AppRouter () {
     return (
