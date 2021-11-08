@@ -7,26 +7,28 @@ import NavBar from '../components/NavBar/NavBar'
 import ListProductConteiner from '../components/ItemListConteiner/ItemListConteiner'
 import ItemDetailConteiner from '../components/ItemDetailConteiner/ItemDetailConteiner'
 import CartPage from '../pages/CartPage'
-
+import CartFinal from '../components/CartFinal/CartFinal'
 //Context
 import { ThemProvider } from '../Context/themContext'
-import CartWidget from '../components/CartWidget/CartWidget'
+
 
 export default function AppRouter () {
     return (
         <BrowserRouter>
-                <ThemProvider>   
-               
-                        <NavBar/>
+             <ThemProvider>   
+      
+                     <NavBar/>
                         <Switch>     
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/contacto" component={ContacPage}/>          
                             <Route exact path="/category/:catId" component={ListProductConteiner}/>
                             <Route exact path ="/product/:productId" component={ItemDetailConteiner }/>                       
                             <Route exact path ="/cart" component={CartPage}/>
+                            <Route exact path ="/cart/final" component={CartFinal}/>
                             <Route  exact path="*" component={NotFoundPage} />
                         </Switch>
-                </ThemProvider>
+               
+             </ThemProvider>
 
          </BrowserRouter>
 

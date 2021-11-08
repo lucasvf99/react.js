@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <CartProvider>
-       <AppRouter/>
+             <AppRouter/>
       </CartProvider>
     </div>
   );
